@@ -1,0 +1,5 @@
+hello, first of all sorry for my english and great work.
+
+You have to put the property "display: block" to the image so that the button is completely round.
+
+and the box, put the properity "box-shadow:" to box 

@@ -8,21 +8,33 @@
   
   <title>Frontend Mentor | Advice generator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- Font Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-  Advice #<!-- Advice ID goes here -->
-
-  "<!-- Advice text goes here -->"
+  <h1 class="h1">Advice generator app</h1>
+  <main class="main">
+    <div class="card">
+      <!-- Advice ID goes here -->
+      <h2 class="h2">Advice #<span id="number"></span></h2>
+      <!-- Advice text goes here -->
+      <p class="p">"dasdasddasdasddasdasddasdasddasdasd<span id="text"></span>"</p>
+     <div class="button">
+       <img src="./images/icon-dice.svg" alt="dice">
+     </div>
+    </div>
+  </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/Sergio-Ivan-Melgarejo" target="_blank">@Sergio-Ivan-Melgarejo</a>.
   </div>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>
