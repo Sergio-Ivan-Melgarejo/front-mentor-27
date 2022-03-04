@@ -1,0 +1,75 @@
+.tilt-card-wrap{
+    perspective: 1000px;
+    transition: all 0.6s ease-out;
+}
+
+.tilt-card-wrap:hover{
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);
+    /* box-shadow: #00000005 0px 0px 40px 200px; */
+}
+
+.tilt-card-wrap.closed:hover{
+    transform: scale(1);
+}
+/* 
+.tilt-card-wrap:hover > .card:before{
+    background-color: red;
+} */
+
+.tilt-card-wrap:hover > .card{
+    transition: all 0.3s ease-out;
+}
+
+.card{
+    transform: rotateX(0deg) rotateY(0deg);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease-out;
+}
+
+.t_over{
+    width: 33.333%;
+    height: 33.333%;
+    position: absolute;
+    z-index: 1;
+    border: 1px solid red;
+    transition: all 0.3s ease-out;
+}
+
+.closed .t_over{
+    display: none;
+}
+
+.t_over:nth-child(1){left: 0; top: 0;}
+.t_over:nth-child(2){left: 33.333%; top: 0;}
+.t_over:nth-child(3){left: 66.666%; top: 0;}
+.t_over:nth-child(4){left: 0; top: 33.333%;}
+.t_over:nth-child(5){left: 33.333%; top: 33.333%;}
+.t_over:nth-child(6){left: 66.666%; top: 33.333%;}
+.t_over:nth-child(7){left: 0; top: 66.666%;}
+.t_over:nth-child(8){left: 33.333%; top: 66.666%;}
+.t_over:nth-child(9){left: 66.666%; top: 66.666%;}
+.t_over:nth-child(10){
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    left: 50%; 
+    top: 100%;
+    transform: translate( -50%, -50%);
+}
+
+
+.t_over:nth-child(1):hover ~ .card {transform: rotateX(-20deg) rotateY(20deg)}
+.t_over:nth-child(2):hover ~ .card {transform: rotateX(-20deg) rotateY(0deg)}
+.t_over:nth-child(3):hover ~ .card {transform: rotateX(-20deg) rotateY(-20deg)}
+.t_over:nth-child(4):hover ~ .card {transform: rotateX(0deg) rotateY(20deg)}
+.t_over:nth-child(5):hover ~ .card {transform: rotateX(0deg) rotateY(0deg)}
+.t_over:nth-child(6):hover ~ .card {transform: rotateX(0deg) rotateY(-20deg)}
+.t_over:nth-child(7):hover ~ .card {transform:rotateX(20deg) rotateY(20deg);}
+.t_over:nth-child(8):hover ~ .card {transform: rotateX(20deg) rotateY(0deg)}
+.t_over:nth-child(9):hover ~ .card {transform: rotateX(20deg) rotateY(-20deg)}
+.t_over:nth-child(10):hover ~ .card {transform: rotateX(20deg) rotateY(0deg)}
+
+
+.t_over:nth-child(10):hover  {transform: translate( -50%, -75%) rotateX(20deg) rotateY(0deg)}
