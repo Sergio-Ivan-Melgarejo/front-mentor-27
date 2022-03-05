@@ -123,6 +123,8 @@
     cursor: pointer;
     transition: box-shadow .3s ease;
     transform: translateY(5em) translateZ(40px);
+    border: none;
+    outline-color: hsl(193, 38%, 86%)  ;
 }
 .card.loading .button{
     pointer-events: none;

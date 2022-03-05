@@ -15,6 +15,9 @@ const getData = async () =>{
         adviceText.textContent = `"${advice}"`;
         localStorage.setItem("lastAdvice",JSON.stringify(data.slip));
         card.classList.remove("error");
+
+        speak(id)
+        speak(advice)
     }
     else if(data.menssage !== undefined){
         const { type, advice } = data.slip;
@@ -32,6 +35,11 @@ const getData = async () =>{
     card.classList.remove("loading");
 }
 
+function speak (text) {
+    speechSynthesis.speak(new SpeechSynthesisUtterance(text))
+    console.log("paso")
+}
+
 addEventListener("DOMContentLoaded",()=>{
     let lastAdvice = localStorage.getItem("lastAdvice");
     if(lastAdvice !== null){  
@@ -41,6 +49,9 @@ addEventListener("DOMContentLoaded",()=>{
         adviceNumber.textContent = id;
         adviceText.textContent = `"${advice}"`;
         card.classList.remove("loading");
+
+        speak(id)
+        speak(advice)
     }
     else getData();
     
