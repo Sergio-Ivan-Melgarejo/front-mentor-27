@@ -21,7 +21,6 @@
     position: absolute;
     z-index: 50;
     transition: all 0.3s ease-out;
-    border: 1px solid red;
 }
 
 .t_over:nth-child(1){left: 0; top: 0;}
