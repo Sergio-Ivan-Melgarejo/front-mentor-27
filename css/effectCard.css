@@ -1,24 +1,11 @@
-.tilt-card-wrap{
-    perspective: 1000px;
-    transition: all 0.6s ease-out;
+.container{
+    /* perspective: 1000px;
+    transition: all 0.6s ease-out; */
+    background-color: transparent;
 }
 
-.tilt-card-wrap:hover{
-    transition: all 0.3s ease-out;
+.card:hover{
     transform: scale(1.1);
-    /* box-shadow: #00000005 0px 0px 40px 200px; */
-}
-
-.tilt-card-wrap.closed:hover{
-    transform: scale(1);
-}
-/* 
-.tilt-card-wrap:hover > .card:before{
-    background-color: red;
-} */
-
-.tilt-card-wrap:hover > .card{
-    transition: all 0.3s ease-out;
 }
 
 .card{
@@ -32,13 +19,9 @@
     width: 33.333%;
     height: 33.333%;
     position: absolute;
-    z-index: 1;
-    border: 1px solid red;
+    z-index: 50;
     transition: all 0.3s ease-out;
-}
-
-.closed .t_over{
-    display: none;
+    border: 1px solid red;
 }
 
 .t_over:nth-child(1){left: 0; top: 0;}
@@ -50,26 +33,107 @@
 .t_over:nth-child(7){left: 0; top: 66.666%;}
 .t_over:nth-child(8){left: 33.333%; top: 66.666%;}
 .t_over:nth-child(9){left: 66.666%; top: 66.666%;}
-.t_over:nth-child(10){
-    width: 4em;
-    height: 4em;
-    border-radius: 50%;
-    left: 50%; 
-    top: 100%;
-    transform: translate( -50%, -50%);
+
+
+.t_over:nth-child(1):hover ~ .container .card {transform: rotateX(-20deg) rotateY(20deg)}
+.t_over:nth-child(2):hover ~ .container .card {transform: rotateX(-20deg) rotateY(0deg)}
+.t_over:nth-child(3):hover ~ .container .card {transform: rotateX(-20deg) rotateY(-20deg)}
+.t_over:nth-child(4):hover ~ .container .card {transform: rotateX(0deg) rotateY(20deg)}
+.t_over:nth-child(5):hover ~ .container .card {transform: rotateX(0deg) rotateY(0deg)}
+.t_over:nth-child(6):hover ~ .container .card {transform: rotateX(0deg) rotateY(-20deg)}
+.t_over:nth-child(7):hover ~ .container .card {transform: rotateX(20deg) rotateY(20deg)}
+.t_over:nth-child(8):hover ~ .container .card {transform: rotateX(20deg) rotateY(0deg)}
+.t_over:nth-child(9):hover ~ .container .card {transform: rotateX(20deg) rotateY(-20deg)}
+
+.card-shadow,.card-shadow::after,.card-shadow::before{
+    transition: all 0.6s ease-out;
 }
 
+.t_over:nth-child(1):hover ~ .container .card-shadow {
+    border-radius: 0 0 50% 0;
+    box-shadow: #00000005 -200px -200px 20px 200px;
+}
+.t_over:nth-child(2):hover ~ .container .card-shadow {
+    border-radius: 0 0 50% 50%;
+    box-shadow: #00000005 -0px -250px 20px 150px;
+}
+.t_over:nth-child(3):hover ~ .container .card-shadow {
+    border-radius: 0 0 0 50%;
+    box-shadow: #00000005 200px -200px 20px 200px;
+}
+.t_over:nth-child(4):hover ~ .container .card-shadow {
+    border-radius: 0 50% 50% 0;
+    box-shadow: #00000005 -250px 0px 20px 150px;
+}
+.t_over:nth-child(6):hover ~ .container .card-shadow {
+    border-radius: 50% 0 0 50%;
+    box-shadow: #00000005 250px 0px 20px 150px;
+}
+.t_over:nth-child(7):hover ~ .container .card-shadow {
+    border-radius: 0 50% 0 0;
+    box-shadow: #00000005 -250px 250px 20px 200px;
+}
+.t_over:nth-child(8):hover ~ .container .card-shadow {
+    border-radius: 50% 50% 0 0;
+    box-shadow: #00000005 0px 250px 20px 150px;
+}
+.t_over:nth-child(9):hover ~ .container .card-shadow {
+    border-radius: 50% 0 0 0;
+    box-shadow: #00000005 200px 200px 20px 200px;
+}
 
-.t_over:nth-child(1):hover ~ .card {transform: rotateX(-20deg) rotateY(20deg)}
-.t_over:nth-child(2):hover ~ .card {transform: rotateX(-20deg) rotateY(0deg)}
-.t_over:nth-child(3):hover ~ .card {transform: rotateX(-20deg) rotateY(-20deg)}
-.t_over:nth-child(4):hover ~ .card {transform: rotateX(0deg) rotateY(20deg)}
-.t_over:nth-child(5):hover ~ .card {transform: rotateX(0deg) rotateY(0deg)}
-.t_over:nth-child(6):hover ~ .card {transform: rotateX(0deg) rotateY(-20deg)}
-.t_over:nth-child(7):hover ~ .card {transform:rotateX(20deg) rotateY(20deg);}
-.t_over:nth-child(8):hover ~ .card {transform: rotateX(20deg) rotateY(0deg)}
-.t_over:nth-child(9):hover ~ .card {transform: rotateX(20deg) rotateY(-20deg)}
-.t_over:nth-child(10):hover ~ .card {transform: rotateX(20deg) rotateY(0deg)}
+.t_over:hover ~ .container .card-shadow::after,
+.t_over:hover ~ .container .card-shadow:before{
+    border-radius: 15px 15px 15px 15px;
+    width: 95%;
+    height: 100%;
+}
 
-
-.t_over:nth-child(10):hover  {transform: translate( -50%, -75%) rotateX(20deg) rotateY(0deg)}
+.t_over:nth-child(1):hover ~ .container .card-shadow:before{
+    transform: translate(-20px, -20px) rotate(-7deg);
+}
+.t_over:nth-child(1):hover ~ .container .card-shadow::after{
+    transform: translate(-30px, -80px) rotate(-7deg);
+}
+.t_over:nth-child(2):hover ~ .container .card-shadow:before{
+    transform: translate(10px, -50px) rotate(0deg);
+}
+.t_over:nth-child(2):hover ~ .container .card-shadow::after{
+    transform: translate(10px, -100px) rotate(0deg);
+} 
+.t_over:nth-child(3):hover ~ .container .card-shadow:before{
+    transform: translate(50px, -20px) rotate(7deg);
+}
+.t_over:nth-child(3):hover ~ .container .card-shadow::after{
+    transform: translate(60px, -80px) rotate(7deg);
+} 
+.t_over:nth-child(4):hover ~ .container .card-shadow:before{
+    transform: translate(-50px, -0px) rotate(0deg);
+}
+.t_over:nth-child(4):hover ~ .container .card-shadow::after{
+    transform: translate(-90px, -0px) rotate(0deg);
+} 
+.t_over:nth-child(6):hover ~ .container .card-shadow:before{
+    transform: translate(50px, -0px) rotate(0deg);
+}
+.t_over:nth-child(6):hover ~ .container .card-shadow::after{
+    transform: translate(90px, -0px) rotate(0deg);
+} 
+.t_over:nth-child(7):hover ~ .container .card-shadow:before{
+    transform: translate(-30px, 20px) rotate(7deg);
+}
+.t_over:nth-child(7):hover ~ .container .card-shadow::after{
+    transform: translate(-40px, 80px) rotate(7deg);
+}
+.t_over:nth-child(8):hover ~ .container .card-shadow:before{
+    transform: translate(10px, 50px) rotate(0deg);
+}
+.t_over:nth-child(8):hover ~ .container .card-shadow::after{
+    transform: translate(10px, 100px) rotate(0deg);
+} 
+.t_over:nth-child(9):hover ~ .container .card-shadow:before{
+    transform: translate(40px, 20px) rotate(-7deg);
+}
+.t_over:nth-child(9):hover ~ .container .card-shadow::after{
+    transform: translate(50px, 80px) rotate(-7deg);
+}
