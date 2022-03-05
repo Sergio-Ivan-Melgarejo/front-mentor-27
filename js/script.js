@@ -12,7 +12,7 @@ const getData = async () =>{
     if(data.slip !== undefined){
         const { id, advice } = data.slip;
         adviceNumber.textContent = id;
-        adviceText.textContent = advice;
+        adviceText.textContent = `"${advice}"`;
         localStorage.setItem("lastAdvice",JSON.stringify(data.slip));
         card.classList.remove("error");
     }
@@ -39,7 +39,7 @@ addEventListener("DOMContentLoaded",()=>{
         lastAdvice = JSON.parse(lastAdvice);
         const { id, advice } = lastAdvice;
         adviceNumber.textContent = id;
-        adviceText.textContent = advice;
+        adviceText.textContent = `"${advice}"`;
         card.classList.remove("loading");
     }
     else getData();

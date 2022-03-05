@@ -87,8 +87,7 @@
     transform: translateZ(40px);
     border-radius: 10px;
     transition: background-color .6s ease-out, color .6s ease-out;
-    min-height: 6em;
-    margin: 25px 0;
+    margin: 25px 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,7 +122,7 @@
     border-radius: 50%;
     cursor: pointer;
     transition: box-shadow .3s ease;
-    transform: translateY(4.5em) translateZ(40px);
+    transform: translateY(5em) translateZ(40px);
 }
 .card.loading .button{
     pointer-events: none;
@@ -141,8 +140,8 @@
 
 .card .button img{
     display: block;
-    width: 1.2em;
-    padding: 1em;
+    width: 1.5em;
+    padding: 1.5em;
 }
 
 @media screen and (min-width:720px) {
