@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/Sergio-Ivan-Melgarejo/front-mentor-27)
+- Live Site URL: [GitHub](https://sergio-ivan-melgarejo.github.io/front-mentor-27/)
 
 ## My process
 
