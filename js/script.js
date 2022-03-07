@@ -37,7 +37,6 @@ const getData = async () =>{
 
 function speak (text) {
     speechSynthesis.speak(new SpeechSynthesisUtterance(text))
-    console.log("paso")
 }
 
 addEventListener("DOMContentLoaded",()=>{

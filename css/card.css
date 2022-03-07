@@ -56,7 +56,7 @@
     box-sizing: border-box;
     position: relative;
     z-index: 100;
-    margin-top: 5em;
+    margin: 7em 0;
 }
 
 .card .h2{
@@ -124,7 +124,7 @@
     transition: box-shadow .3s ease;
     transform: translateY(5em) translateZ(40px);
     border: none;
-    outline-color: hsl(193, 38%, 86%)  ;
+    outline-color: hsl(193, 38%, 86%);
 }
 .card.loading .button{
     pointer-events: none;
